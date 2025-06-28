@@ -40,10 +40,3 @@ The `pynput.keyboard` module is used to:
 * Demonstrates **event handling** in Python.
 * Shows practical use of **file handling** and **keyboard monitoring**.
 * Can be extended to study **data privacy** and **ethical hacking techniques** in cybersecurity courses.
-
-
-
-⚠️ Ethical Use
-
-This code is intended strictly for educational purposes. Unauthorized use on systems without user consent is a violation of privacy laws and ethical guidelines.
-
